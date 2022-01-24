@@ -1,0 +1,67 @@
+img{
+    height:150px;
+    width: 100%;
+}
+.flight{
+    padding: 10px;
+    
+}
+h5{
+    font-weight: bolder;
+}
+h6{
+    font-weight: bolder;
+}
+.main {
+    margin: 20px;
+    background-color: #ededed;
+    padding: 20px;
+}
+
+.btn{
+    color: black;
+    /* background-color: rgb(102, 238, 102); */
+    margin: 10px;
+    height: 30px;
+}
+/* .btn:hover{
+    background-color: rgb(25, 114, 25);
+} */
+#year{
+    text-align: center;
+    text-decoration: underline;
+}
+.card{
+    border-radius: 5px;
+}
+.card1 {
+    margin: 10% 0% 0% 0%;
+}
+.card:hover{
+    border: 1px solid rgb(126, 120, 120);
+
+}
+.head1 {
+    color: rgb(136, 136, 196);
+}
+
+/* min widdth 320px */
+@media(min-width: 320px) and (max-width:480px){
+.year-btn{
+    margin: 0 37px;
+}
+.btn{
+margin: 15px 7px;
+height: 30px;
+padding: 0px 15px
+}
+}
+
+@media(min-width: 700px) and (max-width: 991px) {
+.btn{
+    margin: 11px 10px;
+    height: 30px;
+    padding: 0px 15px;
+    font-size: 18px;
+}
+}

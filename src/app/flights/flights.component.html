@@ -1,0 +1,87 @@
+<div class="container-fluid">
+  <div class="main">
+    <h3>SpaceX Launch Programs</h3>
+  
+    <div class="row">
+  
+      <div class="col-lg-2 col-md-4 col-sm-12 col-12 year-btn">
+        <div class="card card1">
+          <h5 class="text-center">Filters</h5>
+          <h6 id="year">Launch Year </h6>
+          <div class="row">
+  
+            <div class="col-sm-6 col-md-6 col-6">
+  
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2007')">2007</button>
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2008')">2008</button>
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2009')">2009</button>
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2010')">2010</button>
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2011')">2011</button>
+            
+
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2012')">2012</button>
+            
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2013')">2013</button>
+            </div>
+            <div class="col-sm-6 col-md-6 col-6">
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2014')">2014</button>
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2015')">2015</button>
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2016')">2016</button>
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2017')">2017</button>
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2018')">2018</button>
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2019')">2019</button>
+              <button type="button" class="btn btn-success alert-success" (click)="sendYear('2020')">2020</button>
+            </div>
+          </div>
+  
+          <h6 id="year">Successful Launch </h6>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-6">
+              <button type="button" class="btn btn-success alert-success" (click)="sendSuccess(true)">True</button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+              <button type="button" class="btn btn-success alert-success" (click)="sendSuccess(false)">False</button>
+            </div>
+          </div>
+  
+          <h6 id="year">Successful landing </h6>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-6">
+              <button type="button" class="btn btn-success alert-success" (click)="LandSuccLuanchSucc(true)">True</button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+              <button type="button" class="btn btn-success alert-success" (click)="LandSuccLuanchSucc(false)">false</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <div *ngFor =" let data of flightData">
+        {{data.flight_number}}
+      </div> -->
+  
+      <div class="col-lg-10 col-md-8 col-12">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 flight" *ngFor="let flights of flightData">
+            <div class="card card2 m-2">
+              <div class="card-header"> <img class="img-responsive" src="{{flights.links.mission_patch}}">
+              </div>
+              <div class="card-body">
+                <b class="head1">{{flights.mission_name}} #{{flights.flight_number}}</b><br><br>
+  
+                <b> Mission Ids:</b> {{flights.mission_id[0]}}<br>
+                <b> Launch Year:</b> {{flights.launch_year}}<br>
+                <b> Successful Launch:</b> {{flights.launch_success}}<br>
+                <b> Successfull Landing :</b> {{flights.rocket.first_stage.cores[0].land_success}}
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="text-center">Developed By {{name | uppercase}}</h3>
+  </div>   
+  
+</div>
